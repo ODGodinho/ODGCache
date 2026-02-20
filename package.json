@@ -1,0 +1,86 @@
+{
+    "name": "stanley-the-template-typescript",
+    "version": "0.0.0",
+    "description": "Stanley TheTemplate for typescript project",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "homepage": "https://github.com/ODGodinho/Stanley-TheTemplate-Typescript",
+    "scripts": {
+        "build": "rimraf dist/ && tsc --project ./tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+        "build:watch": "npm run build && (concurrently \"tsc --project ./tsconfig.build.json -w\" \"tsc-alias -p tsconfig.build.json -w\")",
+        "dev": "tsx --env-file=.env ./src/index.ts",
+        "start": "node --env-file=.env ./dist/index.js",
+        "start:build": "yarn build && node --env-file=.env ./dist/index.js",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
+        "prepare": "husky",
+        "test": "vitest run",
+        "test:ci": "vitest run --passWithNoTests",
+        "test:watch": "vitest --watch"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "lint-staged": {
+        "*": [ "npm run lint:fix" ]
+    },
+    "release": {
+        "branches": [
+            "+([0-9])?(.{+([0-9]),x}).x",
+            "main",
+            "master",
+            "next",
+            "next-major",
+            {
+                "name": "beta",
+                "prerelease": true
+            },
+            {
+                "name": "alpha",
+                "prerelease": true
+            }
+        ],
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/npm",
+            "@semantic-release/github"
+        ]
+    },
+    "files": [
+        "./dist/",
+        "./README.md"
+    ],
+    "author": "Dragons Gamers <https://www.linkedin.com/in/victor-alves-odgodinho>",
+    "license": "MIT",
+    "devDependencies": {
+        "@odg/eslint-config": "^3.2.1",
+        "@odg/tsconfig": "*",
+        "@types/node": ">=24",
+        "@vitest/coverage-istanbul": "^4.0.18",
+        "concurrently": "^9.2.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.2.7",
+        "rimraf": "*",
+        "tsc-alias": "^1.8.16",
+        "tsx": "^4.21.0",
+        "typescript": "^5.9.3",
+        "vite-tsconfig-paths": "^6.1.1",
+        "vitest": "^4.0.18"
+    },
+    "dependencies": {
+        "@inversifyjs/binding-decorators": "^1.1.5",
+        "@inversifyjs/strongly-typed": "^2.2.0",
+        "@odg/axios": "^1.11.0",
+        "@odg/chemical-x": "^2.0.3",
+        "@odg/config": "^1.1.2",
+        "@odg/events": "^1.2.0",
+        "@odg/exception": "^1.7.1",
+        "@odg/json-log": "^1.5.0",
+        "@odg/log": "^1.6.1",
+        "inversify": "^7.11.0",
+        "inversify-binding-decorators": "^4.0.0",
+        "reflect-metadata": "^0.2.2",
+        "zod": "^4.3.6"
+    }
+}
