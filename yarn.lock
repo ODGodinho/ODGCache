@@ -630,10 +630,10 @@
   optionalDependencies:
     reflect-metadata "^0.2.2"
 
-"@odg/exception@*", "@odg/exception@^1.7.1":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@odg/exception/-/exception-1.7.1.tgz#76edd8f4d521f608d580843ce31db7bef3c4ba94"
-  integrity sha512-FEmYZcDkIXqmKDDzrYfGthSu990Nxs9zdsYrSZHn8issBmtTieYEKLjogmQILpercYbfSm4RyD8N2lbfFWwUeA==
+"@odg/exception@*", "@odg/exception@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@odg/exception/-/exception-1.8.0.tgz#843e00b0fa81e6517375042691ebd7bae1cef0ba"
+  integrity sha512-X9fbYpVEjNYNVYKC6ZFEtn0QxbzbaFpFKKlpTBq36pAKl+hvo6R8docb3TUj26OrbyEsQQ5+ZcefBnxHMoSuSg==
 
 "@odg/json-log@*", "@odg/json-log@^1.5.0":
   version "1.5.0"
