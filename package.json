@@ -72,7 +72,7 @@
         "@inversifyjs/binding-decorators": "^1.1.5",
         "@inversifyjs/strongly-typed": "^2.2.0",
         "@odg/axios": "^1.11.0",
-        "@odg/chemical-x": "^2.0.3",
+        "@odg/chemical-x": "^2.1.0",
         "@odg/config": "^1.1.2",
         "@odg/events": "^1.2.0",
         "@odg/exception": "^1.7.1",

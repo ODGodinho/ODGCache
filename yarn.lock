@@ -558,12 +558,15 @@
     "@odg/message" "*"
     axios "*"
 
-"@odg/chemical-x@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@odg/chemical-x/-/chemical-x-2.0.3.tgz#c80884abf619fe447815b8b2f58f947f0a8b33bc"
-  integrity sha512-b9uclw/ixxnDrckGKlLVUH0xPHXoL/Xh6kCLv0Nv+0YsfxBfxlOpT23geHeDLhVl9o70r1zpRwum6xE+n4F/EA==
+"@odg/chemical-x@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@odg/chemical-x/-/chemical-x-2.1.0.tgz#f3d1b2e00ca27a49dd87844e00b6cbfde8ea4822"
+  integrity sha512-xjvCR8jhxDx8NhGuxPlfAe+vZ7Yz7JszOB3x+dFjoD9b7hYwJX6Tb3IPJQO7lIK0LXEss9TfGARq9YHYl7cIlg==
   dependencies:
+    "@inversifyjs/binding-decorators" "^1.1.5"
+    "@inversifyjs/strongly-typed" "^2.2.0"
     "@odg/exception" "*"
+    inversify "^7.11.0"
 
 "@odg/config@^1.1.2":
   version "1.1.2"
