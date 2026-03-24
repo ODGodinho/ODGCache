@@ -22,6 +22,8 @@ jobs:
           node-version: ${{ matrix.version }}
           registry-url: "https://npm.pkg.github.com/"
           cache: yarn
+      - name: Yarn Corepack
+        run: corepack enable
       - name: Yarn Install
         run: yarn
       - if: ${{ github.event_name == 'pull_request' }}
