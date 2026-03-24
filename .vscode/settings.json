@@ -1,5 +1,7 @@
 {
     "typescript.preferences.importModuleSpecifier": "non-relative",
     "vitest.commandLine": "yarn test:watch",
-    "vitest.enable": true
+    "vitest.enable": true,
+    "snyk.advanced.organization": "bcba04ff-aa36-4105-99f6-d9535ea019bc",
+    "snyk.advanced.autoSelectOrganization": true
 }
