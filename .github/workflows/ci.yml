@@ -48,7 +48,7 @@ jobs:
           verbose: true
       - if: ${{ github.event_name == 'push' && vars.IS_PACKAGE == 'true' }}
         name: Install semantic release
-        run: yarn global add semantic-release
+        run: npm install -g semantic-release
       - if: ${{ github.event_name == 'push' && vars.IS_PACKAGE == 'true' }}
         name: Run semantic-release
         env:
