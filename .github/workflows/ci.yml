@@ -17,13 +17,13 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+      - name: Yarn Corepack
+        run: corepack enable
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.version }}
           registry-url: "https://npm.pkg.github.com/"
           cache: yarn
-      - name: Yarn Corepack
-        run: corepack enable
       - name: Yarn Install
         run: yarn
       - if: ${{ github.event_name == 'pull_request' }}
